@@ -31,66 +31,57 @@ namespace mRemoteNG.UI.Forms.OptionsPages
         private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdvancedPage));
-            this.chkWriteLogFile = new System.Windows.Forms.CheckBox();
-            this.chkAutomaticallyGetSessionInfo = new System.Windows.Forms.CheckBox();
-            this.lblMaximumPuttyWaitTime = new System.Windows.Forms.Label();
-            this.chkAutomaticReconnect = new System.Windows.Forms.CheckBox();
-            this.numPuttyWaitTime = new System.Windows.Forms.NumericUpDown();
-            this.chkUseCustomPuttyPath = new System.Windows.Forms.CheckBox();
-            this.lblConfigurePuttySessions = new System.Windows.Forms.Label();
-            this.numUVNCSCPort = new System.Windows.Forms.NumericUpDown();
-            this.txtCustomPuttyPath = new System.Windows.Forms.TextBox();
-            this.btnLaunchPutty = new System.Windows.Forms.Button();
-            this.lblUVNCSCPort = new System.Windows.Forms.Label();
-            this.lblSeconds = new System.Windows.Forms.Label();
-            this.btnBrowseCustomPuttyPath = new System.Windows.Forms.Button();
+            this.chkAutomaticallyGetSessionInfo = new mRemoteNG.UI.Controls.Base.NGCheckBox();
+            this.lblMaximumPuttyWaitTime = new mRemoteNG.UI.Controls.Base.NGLabel();
+            this.chkAutomaticReconnect = new mRemoteNG.UI.Controls.Base.NGCheckBox();
+            this.numPuttyWaitTime = new mRemoteNG.UI.Controls.Base.NGNumericUpDown();
+            this.chkUseCustomPuttyPath = new mRemoteNG.UI.Controls.Base.NGCheckBox();
+            this.lblConfigurePuttySessions = new mRemoteNG.UI.Controls.Base.NGLabel();
+            this.numUVNCSCPort = new mRemoteNG.UI.Controls.Base.NGNumericUpDown();
+            this.txtCustomPuttyPath = new mRemoteNG.UI.Controls.Base.NGTextBox();
+            this.btnLaunchPutty = new mRemoteNG.UI.Controls.Base.NGButton();
+            this.lblUVNCSCPort = new mRemoteNG.UI.Controls.Base.NGLabel();
+            this.lblSeconds = new mRemoteNG.UI.Controls.Base.NGLabel();
+            this.btnBrowseCustomPuttyPath = new mRemoteNG.UI.Controls.Base.NGButton();
             ((System.ComponentModel.ISupportInitialize)(this.numPuttyWaitTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUVNCSCPort)).BeginInit();
             this.SuspendLayout();
             // 
-            // chkWriteLogFile
-            // 
-            this.chkWriteLogFile.AutoSize = true;
-            this.chkWriteLogFile.Location = new System.Drawing.Point(3, 0);
-            this.chkWriteLogFile.Name = "chkWriteLogFile";
-            this.chkWriteLogFile.Size = new System.Drawing.Size(171, 17);
-            this.chkWriteLogFile.TabIndex = 17;
-            this.chkWriteLogFile.Text = "Write log file (mRemoteNG.log)";
-            this.chkWriteLogFile.UseVisualStyleBackColor = true;
-            // 
             // chkAutomaticallyGetSessionInfo
             // 
+            this.chkAutomaticallyGetSessionInfo._mice = mRemoteNG.UI.Controls.Base.NGCheckBox.MouseState.HOVER;
             this.chkAutomaticallyGetSessionInfo.AutoSize = true;
-            this.chkAutomaticallyGetSessionInfo.Location = new System.Drawing.Point(3, 23);
+            this.chkAutomaticallyGetSessionInfo.Location = new System.Drawing.Point(3, 3);
             this.chkAutomaticallyGetSessionInfo.Name = "chkAutomaticallyGetSessionInfo";
             this.chkAutomaticallyGetSessionInfo.Size = new System.Drawing.Size(198, 17);
-            this.chkAutomaticallyGetSessionInfo.TabIndex = 19;
+            this.chkAutomaticallyGetSessionInfo.TabIndex = 0;
             this.chkAutomaticallyGetSessionInfo.Text = "Automatically get session information";
             this.chkAutomaticallyGetSessionInfo.UseVisualStyleBackColor = true;
             // 
             // lblMaximumPuttyWaitTime
             // 
-            this.lblMaximumPuttyWaitTime.Location = new System.Drawing.Point(3, 172);
+            this.lblMaximumPuttyWaitTime.Location = new System.Drawing.Point(3, 152);
             this.lblMaximumPuttyWaitTime.Name = "lblMaximumPuttyWaitTime";
             this.lblMaximumPuttyWaitTime.Size = new System.Drawing.Size(364, 13);
-            this.lblMaximumPuttyWaitTime.TabIndex = 26;
+            this.lblMaximumPuttyWaitTime.TabIndex = 7;
             this.lblMaximumPuttyWaitTime.Text = "Maximum PuTTY wait time:";
             this.lblMaximumPuttyWaitTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // chkAutomaticReconnect
             // 
+            this.chkAutomaticReconnect._mice = mRemoteNG.UI.Controls.Base.NGCheckBox.MouseState.HOVER;
             this.chkAutomaticReconnect.AutoSize = true;
-            this.chkAutomaticReconnect.Location = new System.Drawing.Point(3, 46);
+            this.chkAutomaticReconnect.Location = new System.Drawing.Point(3, 26);
             this.chkAutomaticReconnect.Name = "chkAutomaticReconnect";
             this.chkAutomaticReconnect.Size = new System.Drawing.Size(399, 17);
-            this.chkAutomaticReconnect.TabIndex = 20;
+            this.chkAutomaticReconnect.TabIndex = 1;
             this.chkAutomaticReconnect.Text = "Automatically try to reconnect when disconnected from server (RDP && ICA only)";
             this.chkAutomaticReconnect.UseVisualStyleBackColor = true;
             // 
             // numPuttyWaitTime
             // 
             this.numPuttyWaitTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numPuttyWaitTime.Location = new System.Drawing.Point(373, 170);
+            this.numPuttyWaitTime.Location = new System.Drawing.Point(373, 150);
             this.numPuttyWaitTime.Maximum = new decimal(new int[] {
             999,
             0,
@@ -98,7 +89,7 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             0});
             this.numPuttyWaitTime.Name = "numPuttyWaitTime";
             this.numPuttyWaitTime.Size = new System.Drawing.Size(49, 20);
-            this.numPuttyWaitTime.TabIndex = 27;
+            this.numPuttyWaitTime.TabIndex = 8;
             this.numPuttyWaitTime.Value = new decimal(new int[] {
             5,
             0,
@@ -107,28 +98,29 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             // 
             // chkUseCustomPuttyPath
             // 
+            this.chkUseCustomPuttyPath._mice = mRemoteNG.UI.Controls.Base.NGCheckBox.MouseState.HOVER;
             this.chkUseCustomPuttyPath.AutoSize = true;
-            this.chkUseCustomPuttyPath.Location = new System.Drawing.Point(3, 69);
+            this.chkUseCustomPuttyPath.Location = new System.Drawing.Point(3, 49);
             this.chkUseCustomPuttyPath.Name = "chkUseCustomPuttyPath";
             this.chkUseCustomPuttyPath.Size = new System.Drawing.Size(146, 17);
-            this.chkUseCustomPuttyPath.TabIndex = 21;
+            this.chkUseCustomPuttyPath.TabIndex = 2;
             this.chkUseCustomPuttyPath.Text = "Use custom PuTTY path:";
             this.chkUseCustomPuttyPath.UseVisualStyleBackColor = true;
             this.chkUseCustomPuttyPath.CheckedChanged += new System.EventHandler(this.chkUseCustomPuttyPath_CheckedChanged);
             // 
             // lblConfigurePuttySessions
             // 
-            this.lblConfigurePuttySessions.Location = new System.Drawing.Point(3, 141);
+            this.lblConfigurePuttySessions.Location = new System.Drawing.Point(3, 121);
             this.lblConfigurePuttySessions.Name = "lblConfigurePuttySessions";
             this.lblConfigurePuttySessions.Size = new System.Drawing.Size(364, 13);
-            this.lblConfigurePuttySessions.TabIndex = 24;
+            this.lblConfigurePuttySessions.TabIndex = 5;
             this.lblConfigurePuttySessions.Text = "To configure PuTTY sessions click this button:";
             this.lblConfigurePuttySessions.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // numUVNCSCPort
             // 
             this.numUVNCSCPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numUVNCSCPort.Location = new System.Drawing.Point(373, 282);
+            this.numUVNCSCPort.Location = new System.Drawing.Point(373, 193);
             this.numUVNCSCPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -136,7 +128,7 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             0});
             this.numUVNCSCPort.Name = "numUVNCSCPort";
             this.numUVNCSCPort.Size = new System.Drawing.Size(72, 20);
-            this.numUVNCSCPort.TabIndex = 33;
+            this.numUVNCSCPort.TabIndex = 11;
             this.numUVNCSCPort.Value = new decimal(new int[] {
             5500,
             0,
@@ -148,20 +140,21 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             // 
             this.txtCustomPuttyPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomPuttyPath.Enabled = false;
-            this.txtCustomPuttyPath.Location = new System.Drawing.Point(21, 92);
+            this.txtCustomPuttyPath.Location = new System.Drawing.Point(21, 72);
             this.txtCustomPuttyPath.Name = "txtCustomPuttyPath";
             this.txtCustomPuttyPath.Size = new System.Drawing.Size(346, 20);
-            this.txtCustomPuttyPath.TabIndex = 22;
+            this.txtCustomPuttyPath.TabIndex = 3;
             this.txtCustomPuttyPath.TextChanged += new System.EventHandler(this.txtCustomPuttyPath_TextChanged);
             // 
             // btnLaunchPutty
             // 
+            this.btnLaunchPutty._mice = mRemoteNG.UI.Controls.Base.NGButton.MouseState.HOVER;
             this.btnLaunchPutty.Image = global::mRemoteNG.Resources.PuttyConfig;
             this.btnLaunchPutty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLaunchPutty.Location = new System.Drawing.Point(373, 136);
+            this.btnLaunchPutty.Location = new System.Drawing.Point(373, 115);
             this.btnLaunchPutty.Name = "btnLaunchPutty";
-            this.btnLaunchPutty.Size = new System.Drawing.Size(110, 23);
-            this.btnLaunchPutty.TabIndex = 25;
+            this.btnLaunchPutty.Size = new System.Drawing.Size(110, 25);
+            this.btnLaunchPutty.TabIndex = 6;
             this.btnLaunchPutty.Text = "Launch PuTTY";
             this.btnLaunchPutty.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLaunchPutty.UseVisualStyleBackColor = true;
@@ -169,10 +162,10 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             // 
             // lblUVNCSCPort
             // 
-            this.lblUVNCSCPort.Location = new System.Drawing.Point(3, 284);
+            this.lblUVNCSCPort.Location = new System.Drawing.Point(3, 195);
             this.lblUVNCSCPort.Name = "lblUVNCSCPort";
             this.lblUVNCSCPort.Size = new System.Drawing.Size(364, 13);
-            this.lblUVNCSCPort.TabIndex = 32;
+            this.lblUVNCSCPort.TabIndex = 10;
             this.lblUVNCSCPort.Text = "UltraVNC SingleClick Listening Port:";
             this.lblUVNCSCPort.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblUVNCSCPort.Visible = false;
@@ -180,19 +173,20 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             // lblSeconds
             // 
             this.lblSeconds.AutoSize = true;
-            this.lblSeconds.Location = new System.Drawing.Point(428, 172);
+            this.lblSeconds.Location = new System.Drawing.Point(428, 152);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(47, 13);
-            this.lblSeconds.TabIndex = 28;
+            this.lblSeconds.TabIndex = 9;
             this.lblSeconds.Text = "seconds";
             // 
             // btnBrowseCustomPuttyPath
             // 
+            this.btnBrowseCustomPuttyPath._mice = mRemoteNG.UI.Controls.Base.NGButton.MouseState.HOVER;
             this.btnBrowseCustomPuttyPath.Enabled = false;
-            this.btnBrowseCustomPuttyPath.Location = new System.Drawing.Point(373, 90);
+            this.btnBrowseCustomPuttyPath.Location = new System.Drawing.Point(373, 70);
             this.btnBrowseCustomPuttyPath.Name = "btnBrowseCustomPuttyPath";
             this.btnBrowseCustomPuttyPath.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseCustomPuttyPath.TabIndex = 23;
+            this.btnBrowseCustomPuttyPath.TabIndex = 4;
             this.btnBrowseCustomPuttyPath.Text = "Browse...";
             this.btnBrowseCustomPuttyPath.UseVisualStyleBackColor = true;
             this.btnBrowseCustomPuttyPath.Click += new System.EventHandler(this.btnBrowseCustomPuttyPath_Click);
@@ -201,7 +195,6 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chkWriteLogFile);
             this.Controls.Add(this.chkAutomaticallyGetSessionInfo);
             this.Controls.Add(this.lblMaximumPuttyWaitTime);
             this.Controls.Add(this.chkAutomaticReconnect);
@@ -223,19 +216,18 @@ namespace mRemoteNG.UI.Forms.OptionsPages
             this.PerformLayout();
 
 		}
-		internal System.Windows.Forms.CheckBox chkWriteLogFile;
-		internal System.Windows.Forms.CheckBox chkAutomaticallyGetSessionInfo;
-		internal System.Windows.Forms.Label lblMaximumPuttyWaitTime;
-		internal System.Windows.Forms.CheckBox chkAutomaticReconnect;
-		internal System.Windows.Forms.NumericUpDown numPuttyWaitTime;
-		internal System.Windows.Forms.CheckBox chkUseCustomPuttyPath;
-		internal System.Windows.Forms.Label lblConfigurePuttySessions;
-		internal System.Windows.Forms.NumericUpDown numUVNCSCPort;
-		internal System.Windows.Forms.TextBox txtCustomPuttyPath;
-		internal System.Windows.Forms.Button btnLaunchPutty;
-		internal System.Windows.Forms.Label lblUVNCSCPort;
-		internal System.Windows.Forms.Label lblSeconds;
-		internal System.Windows.Forms.Button btnBrowseCustomPuttyPath;
+		internal Controls.Base.NGCheckBox chkAutomaticallyGetSessionInfo;
+		internal Controls.Base.NGLabel lblMaximumPuttyWaitTime;
+		internal Controls.Base.NGCheckBox chkAutomaticReconnect;
+		internal Controls.Base.NGNumericUpDown numPuttyWaitTime;
+		internal Controls.Base.NGCheckBox chkUseCustomPuttyPath;
+		internal Controls.Base.NGLabel lblConfigurePuttySessions;
+		internal Controls.Base.NGNumericUpDown numUVNCSCPort;
+		internal Controls.Base.NGTextBox txtCustomPuttyPath;
+		internal Controls.Base.NGButton btnLaunchPutty;
+		internal Controls.Base.NGLabel lblUVNCSCPort;
+		internal Controls.Base.NGLabel lblSeconds;
+		internal Controls.Base.NGButton btnBrowseCustomPuttyPath;
 			
 	}
 }

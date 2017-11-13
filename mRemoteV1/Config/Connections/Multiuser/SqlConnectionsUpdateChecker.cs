@@ -19,7 +19,7 @@ namespace mRemoteNG.Config.Connections
 
         public SqlConnectionsUpdateChecker()
         {
-            _sqlConnector = new SqlDatabaseConnector();
+            _sqlConnector = DatabaseConnectorFactory.SqlDatabaseConnectorFromSettings();
             _sqlQuery = new SqlCommand("SELECT * FROM tblUpdate", _sqlConnector.SqlConnection);
             _lastUpdateTime = default(DateTime);
             _lastDatabaseUpdateTime = default(DateTime);
@@ -57,7 +57,15 @@ namespace mRemoteNG.Config.Connections
 
         private bool DatabaseIsMoreUpToDateThanUs()
         {
-            return GetLastUpdateTimeFromDbResponse() > _lastUpdateTime;
+            var lastUpdateInDb = GetLastUpdateTimeFromDbResponse();
+            var IAmTheLastoneUpdated = CheckIfIAmTheLastOneUpdated(lastUpdateInDb);
+            return (lastUpdateInDb > _lastUpdateTime && !IAmTheLastoneUpdated);
+        }
+
+        private bool CheckIfIAmTheLastOneUpdated(DateTime lastUpdateInDb)
+        {
+            DateTime LastSqlUpdateWithoutMilliseconds = new DateTime(Runtime.LastSqlUpdate.Ticks - (Runtime.LastSqlUpdate.Ticks % TimeSpan.TicksPerSecond), Runtime.LastSqlUpdate.Kind);
+            return lastUpdateInDb == LastSqlUpdateWithoutMilliseconds;
         }
 
         private DateTime GetLastUpdateTimeFromDbResponse()
